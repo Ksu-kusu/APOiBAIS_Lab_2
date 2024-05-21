@@ -78,7 +78,11 @@ app.post('/verifyRandomMessageSignature', (req, res) => {
 
   res.json({ isValid });
 });
+// Ручка для корневого URL, отдает простое сообщение
+app.get('/', (req, res) => {
+  res.send('Сервер работает корректно!');
+});
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Server is running at http://localhost:3000`);
 });
